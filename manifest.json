@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PackPilot \u2014 Pack Automation",
+  "version": "1.6.0",
+  "description": "A lightweight browser companion that automates supported pack-opening actions using visible page controls.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://demongacha.com/*"
+  ],
+  "action": {
+    "default_title": "PackPilot",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://demongacha.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PackPilot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13.2 2.8 5.7 13h5l-.7 8.2L18.3 10h-5.1l.0-7.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="brand-copy">
+        <div class="eyebrow">BROWSER COMPANION</div>
+        <h1>PackPilot</h1>
+      </div>
+      <span id="headerBadge" class="badge neutral">IDLE</span>
+    </header>
+
+    <section class="hero-card">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">AUTOMATION</div>
+          <h2>Continuous mode</h2>
+        </div>
+        <label class="switch" aria-label="Enable continuous automation">
+          <input id="enabledToggle" type="checkbox">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+        </label>
+      </div>
+      <p id="stateText" class="muted">Stopped — turn on to begin monitoring.</p>
+      <div class="mode-line"><span class="pulse-dot"></span><span>Watches for available packs</span></div>
+    </section>
+
+    <section class="activity-card" aria-live="polite">
+      <div class="activity-heading">
+        <span class="section-kicker">LIVE ACTIVITY</span>
+        <span class="live-indicator"><span></span> STATUS</span>
+      </div>
+      <p id="statusText" class="activity-message">Open the supported game page to get started.</p>
+      <p id="updatedText" class="timestamp"></p>
+    </section>
+
+    <section class="steps-card">
+      <div class="section-kicker">AUTOMATED WORKFLOW</div>
+      <div class="workflow">
+        <div class="workflow-step"><span class="step-icon">01</span><span>Open pack</span></div>
+        <div class="workflow-step"><span class="step-icon">02</span><span>Tear open</span></div>
+        <div class="workflow-step"><span class="step-icon">03</span><span>Skip animation</span></div>
+        <div class="workflow-step"><span class="step-icon">04</span><span>Continue</span></div>
+      </div>
+    </section>
+
+    <button id="openSite" class="primary-button" type="button">
+      <span>Open game page</span><span aria-hidden="true">↗</span>
+    </button>
+
+    <footer class="footer">
+      <span>PackPilot <span id="versionText">v1.6.0</span></span>
+      <span>Unofficial community tool</span>
+    </footer>
+    <p class="disclaimer">Requires the supported game tab to remain open. Background activity may be delayed by Chrome. This extension is not affiliated with or endorsed by the game developer.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

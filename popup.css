@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+body { margin: 0; width: 360px; min-height: 520px; background: #0b0d14; color: #f4f2fb; font-size: 13px; }
+.app-shell { padding: 19px; background: radial-gradient(ellipse at 85% 0%, rgba(124,58,237,.18), transparent 38%), #0b0d14; }
+.topbar { display:flex; align-items:center; gap:11px; margin-bottom:18px; }
+.brand-mark { width:39px; height:39px; display:grid; place-items:center; border:1px solid #493476; border-radius:12px; color:#c4a5ff; background:linear-gradient(145deg,#30204f,#171526); box-shadow:0 5px 18px #0005; }
+.brand-mark svg { width:22px; height:22px; }
+.brand-copy { flex:1; min-width:0; }
+.eyebrow,.section-kicker { color:#a78bfa; font-size:9px; font-weight:800; letter-spacing:1.55px; }
+h1 { margin:2px 0 0; font-size:19px; line-height:1.15; letter-spacing:-.45px; }
+.badge { border:1px solid #34384a; border-radius:999px; padding:5px 8px; color:#aeb4c5; font-size:9px; font-weight:800; letter-spacing:.8px; }
+.badge.active { color:#c4f4d3; border-color:#23583c; background:#10251b; }
+.badge.neutral { background:#171b27; }
+.hero-card,.activity-card,.steps-card { border:1px solid #292d3d; border-radius:14px; background:linear-gradient(145deg,#171b29,#121520); box-shadow:0 8px 24px #0002; }
+.hero-card { padding:15px; }
+.section-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+h2 { margin:4px 0 0; font-size:15px; letter-spacing:-.2px; }
+.muted { color:#9da5b8; margin:9px 0 13px; font-size:11px; }
+.mode-line { display:flex; align-items:center; gap:8px; color:#b7bfd0; font-size:10px; padding-top:11px; border-top:1px solid #292d3d; }
+.pulse-dot { width:7px; height:7px; border-radius:50%; background:#8b5cf6; box-shadow:0 0 10px #8b5cf688; }
+.switch { position:relative; display:inline-flex; width:46px; height:27px; cursor:pointer; flex:none; }
+.switch input { position:absolute; opacity:0; width:1px; height:1px; }
+.switch-track { position:absolute; inset:0; border-radius:30px; background:#3a4052; border:1px solid #51586b; transition:.18s; }
+.switch-thumb { position:absolute; width:19px; height:19px; top:3px; left:3px; border-radius:50%; background:#f4f2fb; box-shadow:0 1px 4px #0007; transition:.18s; }
+.switch input:checked + .switch-track { background:#7543d6; border-color:#9669f0; }
+.switch input:checked + .switch-track .switch-thumb { transform:translateX(19px); }
+.switch input:focus-visible + .switch-track { outline:2px solid #c4a5ff; outline-offset:3px; }
+.activity-card { margin-top:11px; padding:14px 15px; min-height:100px; }
+.activity-heading { display:flex; justify-content:space-between; align-items:center; }
+.live-indicator { display:flex; align-items:center; gap:5px; color:#7f899e; font-size:8px; font-weight:800; letter-spacing:.8px; }
+.live-indicator span { width:6px; height:6px; border-radius:50%; background:#7c8497; }
+.activity-message { margin:12px 0 4px; color:#f1eff8; font-size:12px; line-height:1.45; }
+.timestamp { margin:0; color:#788196; font-size:9px; }
+.steps-card { margin-top:11px; padding:13px 15px; }
+.workflow { display:grid; grid-template-columns:1fr 1fr; gap:10px 8px; margin-top:12px; }
+.workflow-step { display:flex; align-items:center; gap:8px; color:#c4cada; font-size:10px; }
+.step-icon { display:grid; place-items:center; width:22px; height:22px; border-radius:7px; background:#272039; color:#c4a5ff; font-size:9px; font-weight:800; }
+.primary-button { display:flex; justify-content:space-between; align-items:center; width:100%; margin-top:13px; padding:11px 14px; border:1px solid #8a5be8; border-radius:10px; background:linear-gradient(100deg,#7543d6,#5b35a9); color:white; font-size:11px; font-weight:750; cursor:pointer; box-shadow:0 5px 16px #5b35a933; }
+.primary-button:hover { filter:brightness(1.1); }
+.primary-button:focus-visible { outline:2px solid #d7c4ff; outline-offset:3px; }
+.footer { display:flex; justify-content:space-between; margin-top:15px; color:#7f899e; font-size:9px; }
+#versionText { color:#a78bfa; margin-left:3px; }
+.disclaimer { margin:7px 0 0; color:#687287; font-size:9px; line-height:1.45; }
